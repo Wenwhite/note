@@ -41,7 +41,7 @@ li strong {
 </ol>
 ```
 
-&ensp;&ensp;&ensp;&ensp;只有 li 元素中的 strong 元素的样式为斜体字，无需为 strong 元素定义特别的 class 或 id。  
+&ensp;&ensp;&ensp;&ensp;只有`li`元素中的`strong`元素的样式为斜体字，无需为`strong`元素定义特别的`class`或`id`。  
 
 &ensp;&ensp;&ensp;&ensp; ***Eg2:*** CSS代码如下：  
 
@@ -70,3 +70,57 @@ h2 strong {
   <strong>blue</strong>.
 </h2>
 ```
+
+### ID选择器  
+
+&ensp;&ensp;&ensp;&ensp;id选择器可以为标有特定`id`的HTML元素指定特定的样式。以`#`来定义。  
+
+#### ID选择器和派生选择器
+
+&ensp;&ensp;&ensp;&ensp;id选择器常用于建立派生选择器。如下：
+
+``` CSS
+#sidebar p {
+  font-style: italic;
+  text-align: right;
+  margin-top: 0.5em;
+}
+```
+
+&ensp;&ensp;&ensp;&ensp;上面的样式只会应用于出现在`id`是`sidebar`的元素内的段落。  
+
+##### 一个选择器，多种用法
+
+&ensp;&ensp;&ensp;&ensp;即使被标注为`sidebar`的元素只能在文档中出现一次，这个id选择器作为派生选择器也可以被使用很多次：  
+
+``` CSS
+#sidebar p {
+  font-style: italic;
+  text-align: right;
+  margin-top: 0.5em;
+}
+
+#sidebar h2 {
+  font-size: 1em;
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+  line-height: 1.5;
+  text-align: right;
+}
+```
+
+&ensp;&ensp;&ensp;&ensp;与其他`p`元素明显不同的是，`sidebar`内的`p`元素得到了特殊的处理，同时，与其他所有`h2`元素明显不同的是，`sidebar`中的`h2`元素也得到了不同的特殊处理。  
+
+#### 单独的选择器
+
+&ensp;&ensp;&ensp;&ensp;id选择器即使不被用来创建派生选择器，它也可以独立发挥作用：  
+
+``` CSS
+#sidebar {
+  border: 1px dotted #000;
+  padding: 10px;
+}
+```
+
+&ensp;&ensp;&ensp;&ensp;此时，`id`为`sidebar`的元素将拥有一个像素宽的黑色点状边框，同时其周围会有10个像素宽的内边距（`padding`，内部空白）。

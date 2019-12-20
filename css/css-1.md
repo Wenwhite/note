@@ -124,3 +124,25 @@ h2 strong {
 ```
 
 &ensp;&ensp;&ensp;&ensp;此时，`id`为`sidebar`的元素将拥有一个像素宽的黑色点状边框，同时其周围会有10个像素宽的内边距（`padding`，内部空白）。
+
+### 类选择器  
+
+&ensp;&ensp;&ensp;&ensp;CSS中，类选择器以一个点`.`显示。
+
+``` CSS
+.center {
+  text-align: center;
+}
+```
+
+&ensp;&ensp;&ensp;&ensp;效果如下，h1和p元素都有`center`类。这意味着两者都将遵守`.center`选择器中的样式：
+
+``` HTML
+<h1 class="center">
+This heading will be center-aligned
+</h1>
+
+<p class="center">
+This paragraph will also be center-aligned.
+</p>
+```
